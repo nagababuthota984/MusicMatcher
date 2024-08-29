@@ -6,7 +6,7 @@ namespace Learn.MusicMatcher.Types;
 public class Query
 {
     [GraphQLDescription("Playlists hand-picked to be featured to all users.")]
-    public async Task<List<Playlist>> FeaturedPlaylistsAsync(SpotifyService spotifyService)
+    public async Task<List<Playlist>> FeaturedPlaylists(SpotifyService spotifyService)
     {
         var response = await spotifyService.GetFeaturedPlaylistsAsync();
         ICollection<PlaylistSimplified> items = response.Playlists.Items;
